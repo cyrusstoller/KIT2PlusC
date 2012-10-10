@@ -52,7 +52,7 @@
       </tr>
       <tr>
         <td>Average Time spent on each source</td>
-        <td><%= (SourceEvaluation.average(:time_spent)/1000.to_f).round(3) %> sec</td>
+        <td><%= (SourceEvaluation.average(:time_spent)/1000.to_f).round(3) rescue "N/A" %> sec</td>
       </tr>
       <tr>
         <th>AB Testing</th>
