@@ -26,3 +26,10 @@ Updating your application
 $ git push heroku master
 $ heroku run rake db:migrate # only if you updated the database
 ```
+
+## Admin for dashboard and downloads
+`.env`
+```
+ADMIN_USER=user
+ADMIN_PASS=pass
+```
