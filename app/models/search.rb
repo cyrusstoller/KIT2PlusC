@@ -22,7 +22,8 @@ class Search < ActiveRecord::Base
   belongs_to :participant, :class_name => "Participant", :foreign_key => "participant_id"
   
   before_validation(:on => :create) do
-    self.ad_test = rand(2)
+    val = ENV["ad_test"] || 0
+    self.ad_test = val
   end
   
   validates_presence_of :ad_test

@@ -32,4 +32,5 @@ $ heroku run rake db:migrate # only if you updated the database
 ```
 ADMIN_USER=user
 ADMIN_PASS=pass
+ad_test=1 # either 0 or 1 - defaults to 0
 ```
