@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20120506083309
+# Schema version: 20130402044250
 #
 # Table name: demographics
 #
@@ -18,6 +18,7 @@
 #  native_language      :string(255)
 #  created_at           :datetime         not null
 #  updated_at           :datetime         not null
+#  credits_completed    :integer
 #
 
 require 'spec_helper'

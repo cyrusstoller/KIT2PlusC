@@ -14,5 +14,6 @@ FactoryGirl.define do
     country_of_schooling "MyString"
     native_english false
     native_language "MyString"
+    credits_completed 0
   end
 end

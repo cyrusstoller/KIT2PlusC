@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120506083309) do
+ActiveRecord::Schema.define(:version => 20130402044250) do
 
   create_table "demographics", :force => true do |t|
     t.integer  "participant_id"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(:version => 20120506083309) do
     t.string   "native_language"
     t.datetime "created_at",           :null => false
     t.datetime "updated_at",           :null => false
+    t.integer  "credits_completed"
   end
 
   create_table "participants", :force => true do |t|

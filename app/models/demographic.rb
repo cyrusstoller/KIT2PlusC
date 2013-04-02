@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20120506083309
+# Schema version: 20130402044250
 #
 # Table name: demographics
 #
@@ -18,11 +18,12 @@
 #  native_language      :string(255)
 #  created_at           :datetime         not null
 #  updated_at           :datetime         not null
+#  credits_completed    :integer
 #
 
 class Demographic < ActiveRecord::Base
   attr_accessible :age, :country_of_birth, :country_of_residence, :country_of_schooling, :ethnicity, :gender
-  attr_accessible :gpa, :major, :native_english, :native_language, :year_university
+  attr_accessible :gpa, :major, :native_english, :native_language, :year_university, :credits_completed
   
   # validates_presence_of :participant_id
   validates_presence_of :gender
@@ -34,6 +35,7 @@ class Demographic < ActiveRecord::Base
   validates_presence_of :country_of_birth
   validates_presence_of :country_of_schooling
   validates_inclusion_of :native_english, :in => [true, false]
+  validates_numericality_of :credits_completed, :greater_than_or_equal_to => 0
   
   belongs_to :participant, :class_name => "Participant", :foreign_key => "participant_id"
 end
